@@ -1,3 +1,4 @@
+// import { Fragment } from "react";
 function App() {
   return (
     <>
@@ -8,4 +9,9 @@ function App() {
   );
 }
 
+//* Calling a function!
+console.log(App());
+
+//* Calling a component!
+console.log(<App />);
 export default App;

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Fragment } from "react";
 function App() {
   const DATA = [
@@ -30,7 +31,7 @@ function App() {
 }
 
 //* Calling a function!
-console.log(App());
+// console.log(App());
 
 //* Calling a component!
 // console.log(<App />);

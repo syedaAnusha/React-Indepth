@@ -6,6 +6,7 @@ function App() {
 
   const IncrementCounter = () => {
     // setInc(inc + 1);
+    setInc(inc + 1);
     setInc((prev) => prev + 1);
     setInc((prev) => prev + 1);
 

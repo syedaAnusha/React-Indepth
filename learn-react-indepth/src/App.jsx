@@ -1,31 +1,36 @@
 /* eslint-disable no-unused-vars */
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 function App() {
-  const DATA = [
-    { product: "Cupboard", quantity: 11 },
-    { product: "Chair", quantity: 4 },
-    { product: "Sofa", quantity: 10 },
-    { product: "Blanket", quantity: 2 },
-    { product: "Spray", quantity: 5 },
-    { product: "Iron Stand", quantity: 7 },
-    { product: "Stool", quantity: 8 },
-    { product: "Cupboard", quantity: 11 },
-  ];
+  const [inc, setInc] = useState(0);
+  const [dec, setDec] = useState(0);
 
-  // const [data, setData] = useState([]);
-  // useEffect(() => {
-  //   setData(DATA);
-  // }, []);
-
+  const IncrementCounter = () => {
+    setInc(inc + 1);
+    setInc(inc + 1);
+    setInc(inc + 1);
+    setInc(inc + 1);
+    setInc(inc + 1);
+    setInc(inc + 1);
+  };
+  const decrementCounter = () => {
+    setDec(dec - 1);
+  };
   return (
     <Fragment>
       <div>
-        <ul>
-          {DATA.map((item, index) => (
-            <li key={index}>{item.product}</li>
-          ))}
-        </ul>
+        <button
+          onClick={IncrementCounter}
+          className="border 1px solid bg-green-600 p-1 cursor-pointer"
+        >
+          Increment Counter {inc}
+        </button>
       </div>
+      <button
+        onClick={decrementCounter}
+        className="border 1px solid bg-green-600 p-1 cursor-pointer"
+      >
+        Decrement Counter {dec}
+      </button>
     </Fragment>
   );
 }

@@ -5,12 +5,11 @@ function App() {
   const [dec, setDec] = useState(0);
 
   const IncrementCounter = () => {
-    setInc(inc + 1);
-    setInc(inc + 1);
-    setInc(inc + 1);
-    setInc(inc + 1);
-    setInc(inc + 1);
-    setInc(inc + 1);
+    // setInc(inc + 1);
+    setInc((prev) => prev + 1);
+    setInc((prev) => prev + 1);
+
+    console.log(inc);
   };
   const decrementCounter = () => {
     setDec(dec - 1);

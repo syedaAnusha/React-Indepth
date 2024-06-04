@@ -71,4 +71,34 @@ export default class App extends Component {
   }
 }
 
+//* Fibre Node
+
+//** {
+//** stateNode: new ClickCounter,
+//** type: ClickCounter,
+//** alternate: null,
+//** key: null,
+//** updateQueue: null,
+//** memoizedState: {count: 0},
+//** pendingProps: {},
+//** memoizedProps: {},
+//** tag: 1,
+//** effectTag: 0,
+//** nextEffect: null
+//** }
+
+//**  {
+//**     stateNode: new HTMLSpanElement,
+//**     type: "span",
+//**     alternate: null,
+//**     key: "2",
+//**     updateQueue: null,
+//**     memoizedState: null,
+//**     pendingProps: {children: 0},
+//**     memoizedProps: {children: 0},
+//**     tag: 5,
+//**     effectTag: 0,
+//**     nextEffect: null
+//** }
+
 // export default App;

@@ -26,17 +26,29 @@ class LifeCycleA extends Component {
   }
   getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log("LifeCycleA getSnapShotBeforeUpdate");
+    return null;
   }
 
   componentDidUpdate() {
     console.log("LifeCycleA componentDidUpdate!");
   }
+  changeOnClick = () => {
+    this.setState({
+      name: "Anusha Syeda!",
+    });
+  };
   render() {
     console.log("LifeCycleA render Method called!");
     return (
-      <div className="text text-cyan-800 font-extrabold text-2xl">
-        Hey I am LifeCycle A{/* <LifeCycleAChild /> */}
-      </div>
+      <>
+        <button
+          className="text text-cyan-800 font-extrabold text-2xl"
+          onClick={this.changeOnClick}
+        >
+          Click me!
+        </button>
+        <LifeCycleAChild />
+      </>
     );
   }
 }

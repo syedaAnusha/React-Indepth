@@ -8,33 +8,39 @@ class LifeCycleA extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "anusha",
+      count: 0,
     };
-    console.log("LifeCycleA Construtor");
+    // console.log("LifeCycleA Construtor");
   }
-  static getDerivedStateFromProps(props, state) {
-    console.log("LifeCycleA getDerivedStateFromProps");
-    return null;
-  }
+  // static getDerivedStateFromProps(props, state) {
+  //   console.log("LifeCycleA getDerivedStateFromProps");
+  //   return null;
+  // }
   componentDidMount() {
     console.log("LifeCycleA componentDidMount!");
+    // setTimeout(() => {
+    //   console.log("Data Loaded!");
+    // }, 3000);
   }
 
-  shouldComponentUpdate() {
-    console.log("LifeCycleA ShouldComponentUpdate!");
-    return true;
-  }
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log("LifeCycleA getSnapShotBeforeUpdate");
-    return null;
-  }
+  // shouldComponentUpdate() {
+  //   console.log("LifeCycleA ShouldComponentUpdate!");
+  //   return true;
+  // }
+  // getSnapshotBeforeUpdate(prevProps, prevState) {
+  //   console.log("LifeCycleA getSnapShotBeforeUpdate");
+  //   return null;
+  // }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     console.log("LifeCycleA componentDidUpdate!");
+    if (this.state.count !== prevState.count) {
+      console.log("counter updated :", this.state.count);
+    }
   }
   changeOnClick = () => {
     this.setState({
-      name: "Anusha Syeda!",
+      count: this.state.count + 1,
     });
   };
   render() {
@@ -42,12 +48,11 @@ class LifeCycleA extends Component {
     return (
       <>
         <button
-          className="text text-cyan-800 font-extrabold text-2xl"
+          className="text text-cyan-800 font-extrabold text-2xl border-4 border-cyan-800"
           onClick={this.changeOnClick}
         >
           Click me!
         </button>
-        <LifeCycleAChild />
       </>
     );
   }

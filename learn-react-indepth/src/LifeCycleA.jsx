@@ -9,6 +9,7 @@ class LifeCycleA extends Component {
     super(props);
     this.state = {
       count: 0,
+      isIncrement: false,
     };
     // console.log("LifeCycleA Construtor");
   }
@@ -41,6 +42,7 @@ class LifeCycleA extends Component {
   changeOnClick = () => {
     this.setState({
       count: this.state.count + 1,
+      isIncrement: true,
     });
   };
   render() {
@@ -53,6 +55,11 @@ class LifeCycleA extends Component {
         >
           Click me!
         </button>
+        {this.state.isIncrement && (
+          <p className="text text-cyan-800 font-extrabold text-md">
+            Counter has incremented!
+          </p>
+        )}
       </>
     );
   }

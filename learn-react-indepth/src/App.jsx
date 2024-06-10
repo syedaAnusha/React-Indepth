@@ -1,17 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
-import Person from "./Person";
-import ErrorBoundary from "./ErrorBoundary";
-// import LifeCycleA from "./LifeCycleA";
-
+import UseState from "./react-hooks-components/UseState";
 export default class App extends Component {
   render() {
-    const person = { firstname: "Anusha", lastname: "syeda" };
     return (
       <>
-        <ErrorBoundary>
-          <Person person={person} />
-        </ErrorBoundary>
+        <UseState />
       </>
     );
   }

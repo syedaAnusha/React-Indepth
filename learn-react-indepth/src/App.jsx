@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
-import UseState from "./react-hooks-components/UseState";
+import ChallengeThree from "./react-hooks-components/use-state/ChallengeThree";
 export default class App extends Component {
   render() {
     return (
       <>
-        <UseState />
+        <ChallengeThree />
       </>
     );
   }

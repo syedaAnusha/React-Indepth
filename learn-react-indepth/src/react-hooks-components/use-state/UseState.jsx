@@ -2,9 +2,9 @@
 /* eslint-disable no-unused-vars */
 //* This file is dedicated to practise useState hook only!
 import { useEffect, useState } from "react";
-import { DATA } from "./student_data";
-import Card from "./ui/Card";
-import { Block } from "./ui/Block";
+import { DATA } from "../../student_data";
+import Card from "../ui/Card";
+import { Block } from "../ui/Block";
 
 function createInitialTodos() {
   const initialTodos = [];
@@ -54,7 +54,7 @@ const Todos = () => {
           >
             Add
           </button>
-          <button
+          {/* <button
             className="rounded-md border-2 p-1 w-20 border-cyan-800 hover:bg-cyan-950 hover:text-white"
             onClick={() => {
               console.log(version);
@@ -62,25 +62,25 @@ const Todos = () => {
             }}
           >
             Reset
-          </button>
+          </button> */}
         </section>
         <Block value={todos} />
-        <Form key={version} />
+        {/* <Form key={version} /> */}
       </main>
     </>
   );
 };
 
-function Form() {
-  const [name, setName] = useState("Taylor");
+// function Form() {
+//   const [name, setName] = useState("Taylor");
 
-  return (
-    <>
-      <input value={name} onChange={(e) => setName(e.target.value)} />
-      <p>Hello, {name}.</p>
-    </>
-  );
-}
+//   return (
+//     <>
+//       <input value={name} onChange={(e) => setName(e.target.value)} />
+//       <p>Hello, {name}.</p>
+//     </>
+//   );
+// }
 
 //* Main/Parent Component
 const UseState = () => {

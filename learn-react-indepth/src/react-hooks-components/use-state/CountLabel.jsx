@@ -17,8 +17,8 @@ export default function CountLabel({ count }) {
 
   return (
     <>
-      <h1>{count}</h1>
-      <h1>{trend}</h1>
+      <h1 className="text-white">{count}</h1>
+      <h1 className="text-white">{trend}</h1>
     </>
   );
 }

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
-import ChallengeOne from "./react-hooks-components/use-Effect/ChallengeOne";
+import ChallengeOne from "./react-hooks-components/";
 export default class App extends Component {
   render() {
     return (

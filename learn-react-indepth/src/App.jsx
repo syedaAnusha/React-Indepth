@@ -1,16 +1,20 @@
 /* eslint-disable no-unused-vars */
-import React, { Component } from "react";
+import { useState } from "react";
 import { ThemeContext } from "./react-hooks-components/use-Context/ThemeContext";
 import Form from "./react-hooks-components/use-Context/Form";
-export default class App extends Component {
-  render() {
-    return (
-      <ThemeContext.Provider value="light">
-        <Form />
-      </ThemeContext.Provider>
-    );
-  }
-}
+
+const App = () => {
+  const [theme, setTheme] = useState("dark");
+  return (
+    <ThemeContext.Provider value={theme}>
+      <Form />
+      <button onClick={() => setTheme("light")}>Switch to Light Mode</button>
+      <button onClick={() => setTheme("dark")}>Switch to Dark Mode</button>
+    </ThemeContext.Provider>
+  );
+};
+
+export default App;
 
 // let story = [
 //   { id: "create1", label: "anusha's story" },

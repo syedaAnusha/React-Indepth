@@ -8,8 +8,20 @@ const App = () => {
   return (
     <ThemeContext.Provider value={theme}>
       <Form />
-      <button onClick={() => setTheme("light")}>Switch to Light Mode</button>
-      <button onClick={() => setTheme("dark")}>Switch to Dark Mode</button>
+      <div className="flex gap-3">
+        <button
+          className=" p-3 rounded-md bg-teal-800 text-white"
+          onClick={() => setTheme("light")}
+        >
+          Switch to Light Mode
+        </button>
+        <button
+          className=" p-3 rounded-md bg-teal-800 text-white"
+          onClick={() => setTheme("dark")}
+        >
+          Switch to Dark Mode
+        </button>
+      </div>
     </ThemeContext.Provider>
   );
 };
